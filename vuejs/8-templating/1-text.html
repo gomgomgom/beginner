@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Hello Vue - Templating - Text</title>
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <span>Message: {{ msg }}</span>
+
+      <br/>
+      
+      <!-- Try this to use one-time interpolations that do not update on data
+      change by using the v-once directive, but keep in mind this will also
+      affect any other bindings on the same node -->
+      <span v-once>Message: {{ msg_once }}</span>
+    </div>
+
+    <script>
+      var app = new Vue({
+        el: '#app',
+        data: {
+          msg: 'test text',
+          msg_once: 'text once'
+        }
+      })
+    </script>
+  </body>
+</html>
